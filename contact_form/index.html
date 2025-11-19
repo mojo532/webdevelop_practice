@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input
+                type="text"
+                name="user-name"
+                id="username"
+                required
+                placeholder="Max Richter"
+              />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <label for="useremail">Your E-Mail Address</label>
+              <input type="email" name="user-email" id="useremail" required />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <label for="userphone">Your Phone Number</label>
+              <input
+                type="number"
+                name="user-pnumber"
+                id="userphone"
+                required
+                minlength="15"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="usermessage">Your Message</label>
+          <textarea
+            id="usermessage"
+            name="user-message"
+            required
+            rows="5"
+          ></textarea>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <label for="favorite-color">How did you find us?</label>
+              <select id="favorite-color" name="favoritecolor">
+                <option value="blue">Web search</option>
+                <option value="yellow">Social media</option>
+                <option value="red">Others</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="vphonecall" value="phone" />
+              <label for="vphonecall">Call me</label>
+            </li>
+          </ul>
+          <ul>
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="vemail" value="email" />
+              <label for="vemail">Send me an email</label>
+            </li>
+          </ul>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="vnoreply"
+                value="no-reply"
+              />
+              <label for="vnoreply">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms" name="terms" required />
+            <label for="agree-terms">Accept Terms</label>
+          </div>
+        </section>
+        <section>
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
