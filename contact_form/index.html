@@ -17,7 +17,7 @@
       <h1>Contact Us</h1>
     </header>
     <main>
-      <form action="/" method="GET">
+      <form action="/contact_form" method="GET">
         <section>
           <h2>How can we help you?</h2>
           <ul>
@@ -28,25 +28,19 @@
                 name="user-name"
                 id="username"
                 required
-                placeholder="Max Richter"
               />
             </li>
-          </ul>
-          <ul>
             <li>
               <label for="useremail">Your E-Mail Address</label>
               <input type="email" name="user-email" id="useremail" required />
             </li>
-          </ul>
-          <ul>
             <li>
               <label for="userphone">Your Phone Number</label>
               <input
-                type="number"
+                type="tel"
                 name="user-pnumber"
                 id="userphone"
                 required
-                minlength="15"
               />
             </li>
           </ul>
@@ -63,11 +57,11 @@
         <section>
           <ul>
             <li>
-              <label for="favorite-color">How did you find us?</label>
-              <select id="favorite-color" name="favoritecolor">
-                <option value="blue">Web search</option>
-                <option value="yellow">Social media</option>
-                <option value="red">Others</option>
+              <label for="contact-method">How did you find us?</label>
+              <select id="contact-method" name="contactmethod" >
+                <option value="websearch">Web search</option>
+                <option value="socialmedia">Social media</option>
+                <option value="others">Others</option>
               </select>
             </li>
           </ul>
@@ -76,21 +70,17 @@
           <h2>How should we reply?</h2>
           <ul>
             <li class="form-control-inline">
-              <input type="radio" name="verify" id="vphonecall" value="phone" />
+              <input type="radio" name="reply" id="vphonecall" value="phone" />
               <label for="vphonecall">Call me</label>
             </li>
-          </ul>
-          <ul>
             <li class="form-control-inline">
-              <input type="radio" name="verify" id="vemail" value="email" />
+              <input type="radio" name="reply" id="vemail" value="email" />
               <label for="vemail">Send me an email</label>
             </li>
-          </ul>
-          <ul>
             <li class="form-control-inline">
               <input
                 type="radio"
-                name="verify"
+                name="reply"
                 id="vnoreply"
                 value="no-reply"
               />
@@ -106,9 +96,9 @@
             <label for="agree-terms">Accept Terms</label>
           </div>
         </section>
-        <section>
-          <button type="reset">Clear</button>
-          <button type="submit">Submit</button>
+        <section id="form-action">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
         </section>
       </form>
     </main>
